@@ -1,0 +1,154 @@
+.transfer {
+  position: relative;
+  overflow: hidden;
+  background: var(--fog-2);
+  padding-block: var(--section-y);
+}
+
+.transfer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(1, 70, 187, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+.transfer__inner {
+  position: relative;
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: center;
+}
+
+.transfer__content {
+  max-width: 40rem;
+}
+
+.transfer__title {
+  margin-top: 1.1rem;
+  font-size: var(--fs-h2);
+  max-width: 16ch;
+}
+
+.transfer__lead {
+  margin-top: 1.3rem;
+}
+
+.transfer__highlights {
+  margin-top: 2.4rem;
+  display: grid;
+  gap: 1.3rem;
+}
+
+.transfer__highlight {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.transfer__highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--blue);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.transfer__highlight-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.transfer__highlight:hover .transfer__highlight-icon {
+  background: var(--gold);
+  color: var(--navy-900);
+  transform: translateY(-3px);
+}
+
+.transfer__highlight h3 {
+  font-size: 1.06rem;
+  font-weight: 800;
+}
+
+.transfer__highlight p {
+  margin-top: 0.2rem;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.transfer__cta {
+  margin-top: 2.4rem;
+}
+
+/* Visual */
+.transfer__visual {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.transfer__photo {
+  margin: 0;
+  aspect-ratio: 4 / 4.4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 6px solid #fff;
+}
+
+.transfer__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.transfer__photo--small {
+  position: absolute;
+  right: -1rem;
+  bottom: -1.5rem;
+  width: 45%;
+  aspect-ratio: 1 / 1;
+  border-width: 5px;
+  box-shadow: 0 30px 56px -26px rgba(4, 23, 50, 0.7);
+}
+
+.transfer__seal {
+  position: absolute;
+  left: -1.2rem;
+  top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 6.2rem;
+  height: 6.2rem;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  box-shadow: 0 22px 44px -20px rgba(1, 70, 187, 0.8);
+  animation: floatY 7s var(--ease-soft) infinite;
+}
+
+@media (min-width: 992px) {
+  .transfer__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}

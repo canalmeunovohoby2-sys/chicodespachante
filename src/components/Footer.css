@@ -1,0 +1,128 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, var(--navy-900), #06203f 60%, var(--navy-700));
+  color: rgba(255, 255, 255, 0.72);
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.footer__glow {
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 46rem;
+  height: 46rem;
+  background: radial-gradient(circle, rgba(1, 70, 187, 0.5), transparent 62%);
+  pointer-events: none;
+}
+
+.footer__inner {
+  position: relative;
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.footer__brand {
+  max-width: 24rem;
+}
+
+.footer__tagline {
+  margin-top: 1.15rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__cols {
+  display: grid;
+  gap: 2.2rem;
+  grid-template-columns: 1fr;
+}
+
+.footer__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+}
+
+.footer__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.7rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.96rem;
+  transition: color 0.3s var(--ease);
+}
+
+.footer__item svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+  margin-top: 0.2rem;
+  color: var(--blue-400);
+}
+
+.footer__item:hover {
+  color: var(--gold);
+}
+
+.footer__item--static:hover {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer__link {
+  display: block;
+  padding: 0.32rem 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.96rem;
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.footer__link:hover {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+.footer__note {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.66);
+  max-width: 32ch;
+}
+
+.footer__cta {
+  margin-top: 1.25rem;
+}
+
+.footer__bottom {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  padding-block: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 640px) {
+  .footer__cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .footer__inner {
+    grid-template-columns: 0.9fr 1.6fr;
+  }
+
+  .footer__cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

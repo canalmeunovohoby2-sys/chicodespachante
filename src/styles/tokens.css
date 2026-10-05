@@ -1,0 +1,58 @@
+:root {
+  /* Brand */
+  --blue: #0146bb;
+  --blue-700: #01379a;
+  --blue-500: #1e67e0;
+  --blue-400: #4a8bf0;
+  --blue-200: #b9d0f7;
+  --navy-900: #041732;
+  --navy-800: #062449;
+  --navy-700: #0a2f5e;
+  --gold: #fbcd06;
+  --gold-600: #e0b400;
+  --gold-300: #fde16a;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --ink: #081426;
+  --ink-soft: #2a3a52;
+  --muted: #5f7188;
+  --fog: #eef2f9;
+  --fog-2: #f6f8fc;
+  --line: rgba(1, 70, 187, 0.14);
+  --line-soft: rgba(255, 255, 255, 0.14);
+
+  /* Semantic */
+  --bg: var(--white);
+  --text: var(--ink);
+  --text-muted: var(--muted);
+
+  /* Layout */
+  --container: 1200px;
+  --container-wide: 1360px;
+  --gutter: clamp(1.15rem, 4vw, 3rem);
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 26px;
+  --radius-xl: 40px;
+
+  /* Section rhythm */
+  --section-y: clamp(4.5rem, 9vw, 8.5rem);
+
+  /* Type scale */
+  --fs-eyebrow: clamp(0.72rem, 1.6vw, 0.82rem);
+  --fs-body: clamp(1rem, 1.05vw + 0.85rem, 1.14rem);
+  --fs-h1: clamp(2.45rem, 6.4vw, 5.1rem);
+  --fs-h2: clamp(1.95rem, 4.4vw, 3.4rem);
+  --fs-h3: clamp(1.35rem, 2.4vw, 1.95rem);
+  --fs-lead: clamp(1.05rem, 1.2vw + 0.9rem, 1.32rem);
+
+  /* Effects */
+  --shadow-sm: 0 6px 18px -10px rgba(4, 23, 50, 0.28);
+  --shadow: 0 26px 60px -32px rgba(4, 23, 50, 0.45);
+  --shadow-gold: 0 18px 44px -18px rgba(224, 180, 0, 0.55);
+  --ring: 0 0 0 3px rgba(251, 205, 6, 0.55);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}

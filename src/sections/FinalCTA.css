@@ -1,0 +1,136 @@
+.final {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(90% 120% at 50% -10%, #0a3f9e 0%, transparent 55%),
+    linear-gradient(165deg, #041732, #06244a 60%, #041c3d);
+  color: #fff;
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+  text-align: center;
+}
+
+.final__ring {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.final__ring--a {
+  width: 34rem;
+  height: 34rem;
+  top: -14rem;
+  left: 50%;
+  transform: translateX(-70%);
+}
+
+.final__ring--b {
+  width: 34rem;
+  height: 34rem;
+  bottom: -16rem;
+  left: 50%;
+  transform: translateX(-30%);
+  border-color: rgba(251, 205, 6, 0.18);
+}
+
+.final__speed {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.final__speed span {
+  position: absolute;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, rgba(251, 205, 6, 0.55));
+}
+
+.final__speed span:nth-child(1) {
+  top: 28%;
+  left: 4%;
+  width: 8rem;
+}
+
+.final__speed span:nth-child(2) {
+  top: 68%;
+  left: 10%;
+  width: 5rem;
+}
+
+.final__speed span:nth-child(3) {
+  top: 24%;
+  right: 6%;
+  width: 7rem;
+  transform: scaleX(-1);
+}
+
+.final__speed span:nth-child(4) {
+  top: 72%;
+  right: 12%;
+  width: 4.5rem;
+  transform: scaleX(-1);
+}
+
+.final__inner {
+  position: relative;
+  max-width: 52rem;
+}
+
+.final__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0.5rem 1.1rem;
+  border: 1px solid rgba(251, 205, 6, 0.35);
+  border-radius: 999px;
+}
+
+.final__title {
+  margin-top: 1.6rem;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  color: #fff;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.final__text {
+  margin-top: 1.2rem;
+  font-size: var(--fs-lead);
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+.final__actions {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.final__btn {
+  min-width: 16rem;
+}
+
+.final__phone {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (min-width: 640px) {
+  .final__actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+}

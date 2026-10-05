@@ -1,0 +1,219 @@
+.exp {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  padding-block: var(--section-y);
+}
+
+.exp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+.exp__inner {
+  position: relative;
+}
+
+.exp__head {
+  max-width: 40rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.6rem);
+}
+
+.exp__title {
+  margin-top: 1.1rem;
+  font-size: var(--fs-h2);
+}
+
+/* ---------- Showcase: 45+ highlight + cards ---------- */
+.exp__showcase {
+  display: grid;
+  gap: clamp(1.6rem, 3.5vw, 2.4rem);
+  align-items: stretch;
+}
+
+.exp__highlight {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.9rem, 3.6vw, 3.1rem);
+  background: linear-gradient(158deg, var(--navy-900), #062449 55%, var(--navy-700));
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.exp__highlight::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(1, 70, 187, 0.55), transparent 62%);
+  pointer-events: none;
+}
+
+.exp__highlight::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -30% auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 205, 6, 0.18), transparent 66%);
+  pointer-events: none;
+}
+
+.exp__highlight-top {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+  flex-wrap: wrap;
+}
+
+.exp__number {
+  font-size: clamp(4.6rem, 12vw, 9rem);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.055em;
+  color: #fff;
+}
+
+.exp__number-plus {
+  color: var(--gold);
+}
+
+.exp__number-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-bottom: 0.7rem;
+  border-left: 3px solid var(--gold);
+  padding-left: 0.85rem;
+  line-height: 1.5;
+}
+
+.exp__phrase {
+  position: relative;
+  margin-top: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: clamp(1.18rem, 2vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.24;
+  letter-spacing: -0.015em;
+  color: #fff;
+  max-width: 26ch;
+}
+
+.exp__sub {
+  position: relative;
+  margin-top: 1rem;
+  font-size: 0.97rem;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 46ch;
+}
+
+/* ---------- Cards ---------- */
+.exp__cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.exp__card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.exp__card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--blue), var(--gold));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.45s var(--ease);
+}
+
+.exp__card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(1, 70, 187, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.exp__card:hover::before {
+  transform: scaleY(1);
+}
+
+.exp__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+  border-radius: 14px;
+  background: rgba(1, 70, 187, 0.08);
+  color: var(--blue);
+  transition: background 0.4s var(--ease), color 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+
+.exp__card-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.exp__card:hover .exp__card-icon {
+  background: var(--gold);
+  color: var(--navy-900);
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.exp__card-title {
+  font-size: 1.06rem;
+  font-weight: 800;
+}
+
+.exp__card-text {
+  margin-top: 0.3rem;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+@media (min-width: 640px) and (max-width: 991px) {
+  .exp__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .exp__showcase {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .exp__cards {
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,173 @@
+/* ============================================================
+   MOTION SYSTEM
+   Reveals de scroll (IntersectionObserver em Reveal.tsx),
+   microinterações globais e efeitos contínuos.
+   ============================================================ */
+
+/* ---------- Scroll reveal primitives ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(var(--rv-x, 0), var(--rv-y, 40px), 0) scale(var(--rv-s, 1));
+  filter: blur(var(--rv-blur, 0px));
+  transition: opacity 0.9s var(--ease), transform 1.05s var(--ease),
+    filter 0.9s var(--ease);
+  transition-delay: var(--rv-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0px);
+}
+
+[data-reveal="up"] {
+  --rv-y: 40px;
+}
+
+[data-reveal="left"] {
+  --rv-x: -50px;
+  --rv-y: 0;
+}
+
+[data-reveal="right"] {
+  --rv-x: 50px;
+  --rv-y: 0;
+}
+
+[data-reveal="scale"] {
+  --rv-y: 22px;
+  --rv-s: 0.9;
+}
+
+[data-reveal="pop"] {
+  --rv-y: 26px;
+  --rv-s: 0.84;
+  --rv-blur: 7px;
+}
+
+[data-reveal="blur"] {
+  --rv-y: 24px;
+  --rv-blur: 11px;
+}
+
+/* ---------- Continuous keyframes ---------- */
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(251, 205, 6, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(251, 205, 6, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 205, 6, 0);
+  }
+}
+
+@keyframes drawLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -150% 0;
+  }
+  to {
+    background-position: 250% 0;
+  }
+}
+
+/* ============================================================
+   BOTÕES DE WHATSAPP — pulsação + hover + clique
+   ============================================================ */
+a.btn[href*="wa.me"],
+.contact__submit {
+  position: relative;
+  isolation: isolate;
+}
+
+a.btn[href*="wa.me"]::after,
+.contact__submit::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 2px solid rgba(251, 205, 6, 0.85);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  animation: waRing 3s var(--ease-soft) infinite;
+}
+
+@keyframes waRing {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.16);
+  }
+}
+
+a.btn[href*="wa.me"]:hover,
+.contact__submit:hover {
+  transform: translateY(-4px);
+}
+
+a.btn[href*="wa.me"]:active,
+.contact__submit:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+a.btn[href*="wa.me"] svg,
+.contact__submit svg {
+  transition: transform 0.4s var(--ease);
+}
+
+a.btn[href*="wa.me"]:hover svg,
+.contact__submit:hover svg {
+  transform: scale(1.14) rotate(-6deg);
+}
+
+/* ============================================================
+   MICROINTERAÇÕES GLOBAIS
+   ============================================================ */
+.btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Zoom suave em imagens de conteúdo */
+.team__photo img,
+.community__photo img,
+.transfer__photo img {
+  transition: transform 0.9s var(--ease), filter 0.9s var(--ease);
+}
+
+.team__photo:hover img,
+.community__photo:hover img,
+.transfer__photo:hover img {
+  transform: scale(1.045);
+}
+
+.footer__item:hover svg,
+.contact__direct-link:hover svg {
+  transition: transform 0.35s var(--ease);
+  transform: translateX(2px);
+}

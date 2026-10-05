@@ -1,0 +1,130 @@
+.community {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--blue-700), var(--blue) 62%, #0a3f9e);
+  color: #fff;
+  padding-block: var(--section-y);
+}
+
+.community::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 74px 74px;
+  mask-image: radial-gradient(ellipse 70% 70% at 30% 40%, #000, transparent 75%);
+  pointer-events: none;
+}
+
+.community__inner {
+  position: relative;
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: center;
+}
+
+.community__content {
+  max-width: 40rem;
+}
+
+.community__title {
+  margin-top: 1.1rem;
+  font-size: var(--fs-h2);
+  color: #fff;
+  max-width: 17ch;
+}
+
+.community__text {
+  margin-top: 1.3rem;
+  font-size: var(--fs-lead);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 46ch;
+}
+
+.community__event {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  background: rgba(4, 23, 50, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  max-width: 26rem;
+}
+
+.community__event-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex: none;
+  border-radius: 12px;
+  background: var(--gold);
+  color: var(--navy-900);
+}
+
+.community__event-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.community__event-body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.community__event-tag {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.community__event-body strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 0.15rem;
+}
+
+.community__event-place {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.community__visual {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.community__photo {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 40px 70px -34px rgba(0, 0, 0, 0.9);
+}
+
+.community__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .community__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
