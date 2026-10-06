@@ -14,7 +14,7 @@ export function Community() {
             Presença que vai além do atendimento.
           </Reveal>
           <Reveal as="p" className="community__text" delay={140}>
-            A Chico Despachante faz parte da vida da região. Apoiamos iniciativas e
+            Fazemos parte da vida da região. Apoiamos iniciativas e
             eventos locais, porque acreditamos que estar perto também é uma forma de
             atender bem.
           </Reveal>

@@ -33,8 +33,8 @@ export function Transferencia() {
             Sua transferência resolvida sem surpresas.
           </Reveal>
           <Reveal as="p" className="lead transfer__lead" delay={140}>
-            A Chico Despachante auxilia você em todo o processo de transferência do
-            veículo, com acompanhamento próximo e orientação em cada etapa.
+            Auxiliamos você em todo o processo de transferência do veículo, com
+            acompanhamento próximo e orientação em cada etapa.
           </Reveal>
 
           <div className="transfer__highlights">
@@ -61,7 +61,7 @@ export function Transferencia() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Falar com a Chico
+              Falar com um especialista
               <ArrowRight className="btn__arrow" />
             </a>
           </Reveal>

@@ -18,7 +18,7 @@ export function Emplacamento0km() {
           <div className="zero__frame">
             <img
               src="/carronovo.png"
-              alt="Veículo novo pronto para o processo de emplacamento."
+              alt="Veículos prontos para o processo de emplacamento e documentação."
               loading="lazy"
             />
             <span className="zero__frame-tint" aria-hidden="true" />

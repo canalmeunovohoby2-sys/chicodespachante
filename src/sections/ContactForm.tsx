@@ -44,7 +44,7 @@ export function ContactForm() {
     }
 
     const message =
-      `Olá, Chico Despachante! Meu nome é ${nome.trim()}. ` +
+      `Olá! Meu nome é ${nome.trim()}. ` +
       `Gostaria de atendimento sobre ${servico}. ` +
       `Meu telefone é ${telefone.trim()}.`;
 
@@ -70,7 +70,7 @@ export function ContactForm() {
             Atendimento
           </Reveal>
           <Reveal as="h2" className="contact__title" delay={80}>
-            Fale com a Chico Despachante
+            Fale com a nossa equipe
           </Reveal>
           <Reveal as="p" className="lead contact__lead" delay={140}>
             Conte o que você precisa e nossa equipe entrará em contato para orientar
@@ -200,8 +200,8 @@ export function ContactForm() {
             </div>
 
             <p className="contact__privacy">
-              Ao enviar, você será direcionado ao WhatsApp da Chico Despachante com a
-              mensagem preenchida. Nenhum dado é armazenado neste site.
+              Ao enviar, você será direcionado ao nosso WhatsApp com a mensagem
+              preenchida. Nenhum dado é armazenado neste site.
             </p>
           </form>
         </Reveal>

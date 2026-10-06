@@ -45,7 +45,7 @@
 
 .zero__frame {
   position: relative;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 48px 80px -40px rgba(0, 0, 0, 0.9);
@@ -183,6 +183,6 @@
 
   .zero__visual {
     order: 0;
-    max-width: 40rem;
+    max-width: 34rem;
   }
 }

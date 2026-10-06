@@ -46,7 +46,7 @@ export const services: Service[] = [
     title: "Emplacamento 0 km",
     callout: "Comprou um carro novo?",
     description:
-      "Conte com a Chico Despachante para cuidar do emplacamento e da documentação necessária do seu veículo novo.",
+      "Conte com a nossa equipe para cuidar do emplacamento e da documentação necessária do seu veículo novo.",
     icon: "car",
     cta: "Quero emplacar",
   },
@@ -96,7 +96,7 @@ export const steps = [
   {
     number: "01",
     title: "Entre em contato",
-    description: "Fale com a Chico Despachante pelo WhatsApp ou venha até o nosso atendimento.",
+    description: "Fale com a nossa equipe pelo WhatsApp ou venha até o nosso atendimento.",
   },
   {
     number: "02",

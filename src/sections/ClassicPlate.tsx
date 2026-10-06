@@ -28,8 +28,8 @@ export function ClassicPlate() {
           </Reveal>
           <Reveal as="p" className="plate__text" delay={140}>
             A Placa Preta é o processo voltado a veículos antigos que atendem aos
-            critérios de coleção. A Chico Despachante orienta você sobre o caminho e
-            auxilia no encaminhamento junto aos órgãos responsáveis.
+            critérios de coleção. Orientamos você sobre o caminho e auxiliamos no
+            encaminhamento junto aos órgãos responsáveis.
           </Reveal>
           <Reveal className="plate__note" delay={190}>
             <DocumentIcon />

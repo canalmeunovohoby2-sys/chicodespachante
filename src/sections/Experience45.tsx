@@ -27,7 +27,7 @@ export function Experience45() {
       <div className="container exp__inner">
         <header className="exp__head">
           <Reveal as="p" className="eyebrow">
-            Sobre a Chico Despachante
+            Sobre a empresa
           </Reveal>
           <Reveal as="h2" className="exp__title" delay={80}>
             Tradição que atende

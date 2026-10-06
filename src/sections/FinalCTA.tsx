@@ -23,7 +23,7 @@ export function FinalCTA() {
           Precisa resolver a documentação do seu veículo?
         </Reveal>
         <Reveal as="p" className="final__text" delay={140}>
-          Fale com a Chico Despachante e conte o que você precisa.
+          Fale com a nossa equipe e conte o que você precisa.
         </Reveal>
         <Reveal className="final__actions" delay={200}>
           <a

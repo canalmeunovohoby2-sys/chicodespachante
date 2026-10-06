@@ -25,7 +25,7 @@ export function WhatsAppFloat() {
         <WhatsAppIcon filled />
       </span>
       <span className="wa-float__label">
-        <strong>Fale com a Chico</strong>
+        <strong>Fale com um especialista</strong>
         <em>{site.phoneLabel}</em>
       </span>
     </a>

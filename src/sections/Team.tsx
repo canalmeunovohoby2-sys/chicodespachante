@@ -35,9 +35,9 @@ export function Team() {
             Experiência que atende pessoas.
           </Reveal>
           <Reveal as="p" className="lead team__lead" delay={140}>
-            Por trás de cada processo existe atendimento de verdade. Na Chico
-            Despachante você encontra uma equipe acostumada a ouvir, orientar e
-            acompanhar cada cliente com atenção.
+            Por trás de cada processo existe atendimento de verdade. Aqui você
+            encontra uma equipe acostumada a ouvir, orientar e acompanhar cada
+            cliente com atenção.
           </Reveal>
 
           <ul className="team__values">
@@ -57,11 +57,11 @@ export function Team() {
           <Reveal delay={420}>
             <a
               className="team__cta"
-              href={waLink("Olá! Quero falar com a Chico Despachante.")}
+              href={waLink("Olá! Quero falar com a equipe sobre um atendimento.")}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Falar com a Chico
+              Falar com nossa equipe
               <ArrowRight className="team__cta-arrow" />
             </a>
           </Reveal>

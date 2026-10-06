@@ -48,11 +48,11 @@ export function Services() {
             </div>
             <a
               className="service__cta"
-              href={waLink("Olá! Quero falar com a Chico Despachante sobre documentação de veículos.")}
+              href={waLink("Olá! Quero falar com um especialista sobre documentação de veículos.")}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Falar com a Chico
+              Falar com um especialista
               <ArrowRight className="service__cta-arrow" />
             </a>
           </Reveal>

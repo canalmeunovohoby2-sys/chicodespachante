@@ -49,7 +49,7 @@ export function Footer() {
           <div className="footer__col">
             <h3 className="footer__title">Atendimento</h3>
             <p className="footer__note">
-              Fale com a Chico Despachante e conte o que você precisa. Emplacamento,
+              Fale com a nossa equipe e conte o que você precisa. Emplacamento,
               transferência, licenciamento e documentação de veículos.
             </p>
             <a
